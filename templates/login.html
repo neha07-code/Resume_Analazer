@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="auth-container">
+    <div class="auth-card">
+
+        <h2>Welcome back</h2>
+
+        <p class="sub-text">
+            Login to access your account
+        </p>
+
+        <form method="POST">
+
+            <div class="form-row">
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        minlength="6"
+                        pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*]).{6,}$"
+                        title="Password must contain at least 6 characters, 1 uppercase letter and 1 special character"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <div class="auth-links">
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <p class="switch-auth">
+            Don't have an account?
+            <a href="/signup">Sign Up</a>
+        </p>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="home-container">
+
+    <div class="home-card">
+
+        <!-- Left Side -->
+        <div class="home-content">
+
+            <h1>Free AI Resume Analyzer</h1>
+
+            <h2>Turn Your Resume Into an Interview Magnet</h2>
+
+            <p>
+                Analyze your resume with AI, improve your skills,
+                and prepare yourself for your next interview.
+            </p>
+
+            <div class="home-buttons">
+
+                <a href="/login" class="btn">
+                    Login
+                </a>
+
+                <a href="/signup" class="btn signup-btn">
+                    Sign Up
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side Image -->
+        <div class="home-image">
+
+            <img
+                src="{{ url_for('static', filename='Screenshot 2026-09-05 105244.png') }}"
+                alt="AI Resume Analyzer"
+            >
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
